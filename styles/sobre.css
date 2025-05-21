@@ -1,0 +1,43 @@
+.sobre {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  flex-direction: row;
+}
+
+.texto {
+  text-align: justify;
+  max-width: 50%;
+  margin-right: 50px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 1024px) {
+  .sobre {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .texto {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .imagem {
+    margin-top: 2rem;
+    justify-content: center;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}

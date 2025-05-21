@@ -1,0 +1,244 @@
+/* Font-family */
+@font-face {
+    font-family: "Reanimation";
+    src: url('./fonts/REANIMATION_Blackletter.ttf');
+}
+
+@font-face {
+    font-family: "GrovericRegular";
+    src: url('./fonts/GrovericRegular.ttf');
+}
+
+@font-face {
+    font-family: "GrovericMedium";
+    src: url('./fonts/GrovericMedium.ttf');
+}
+
+@font-face {
+    font-family: "GrovericBold";
+    src: url('./fonts/GrovericBold.ttf');
+}
+
+.grovericRegular {
+    font-family: "GrovericRegular";
+    color: white;
+}
+
+.grovericMedium {
+    font-family: "GrovericMedium";
+    color: white;
+}
+
+.grovericBold {
+    font-family: "GrovericBold";
+    color: white;
+}
+
+.reanimation {
+    font-family: "Reanimation";
+    color: white;
+}
+
+/* Resetando o padrão da página HTML */
+html,
+body {
+    margin: 0 auto;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: #0A0A0A;
+    overflow-x: hidden;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+    /* ao scrollar, ele suaviza o scroll */
+}
+
+/* Remove os pontinhos e linha das listas */
+ul,
+li,
+a {
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Cabeçalhos das seções */
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Cabeçalho/Navbar */
+#header {
+    position: relative;
+    right: 0;
+    left: 0;
+    height: 70px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0A0A0A;
+    z-index: 1000;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+#header a {
+    color: white;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    margin: 0px;
+}
+
+#menu a {
+    display: block;
+    transition: .2s;
+}
+
+#btn-mobile {
+    display: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: .2s;
+    border: none;
+}
+
+#btn-mobile img {
+    width: 30px;
+    height: 30px;
+}
+
+@media (max-width: 768px) {
+
+    /* Menu aparece de baixo, ocupando mais view height port */
+    #menu {
+        position: absolute;
+        height: auto;
+        display: none;
+        width: 100vw;
+        top: 70px;
+        right: 0px;
+        background-color: #0A0A0A;
+    }
+
+    #btn-mobile {
+        display: block;
+    }
+
+    #nav.active #menu {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        text-indent: 3rem;
+    }
+}
+
+/* Rodapé/Footer */
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+}
+
+/* Removendo o estilo de lista dos elementos LINKS do rodapé */
+.listaRodape li a {
+    color: white;
+}
+
+.menuRodape {
+    display: flex;
+}
+
+.menuRodape h2 {
+    font-size: 16px;
+    margin-bottom: 1rem;
+}
+
+.menuRodape li {
+    font-size: 13px;
+}
+
+.logoRodape {
+    font-size: 25px;
+}
+
+.logoRodape p {
+    font-size: 12px;
+}
+
+.text-black {
+    color: black !important;
+}
+
+.text-white {
+    color: white !important;
+}
+
+/* Conteúdo/miolo de todas as páginas */
+#conteudo {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 0 5vw;
+}
+
+/* botão de voltar ao topo */
+/* Botão fixado no canto inferior direito da tela */
+.bottomtop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    background-color: #0A0A0A;
+    border: 1px solid white;
+    border-radius: 100%;
+    padding: 10px;
+    transition: .2s;
+}
+
+/* Imagem que se adapta ao tamanho do elemento pai */
+.bottomtop img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Crie uma div com aparência de toastify */
+.aviso {
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #0A0A0A;
+}
+
+/* Scrollbar style */
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: red;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(168, 8, 8);
+}

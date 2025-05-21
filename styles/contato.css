@@ -1,0 +1,153 @@
+#contato {
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+  /* height: 70vh; */
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.backgroundForm {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.backgroundForm a {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 3em;
+}
+
+.nameForm,
+.emailForm,
+.mensagemForm {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* textarea estilizado*/
+.mensagemForm textarea {
+  width: 100%;
+  line-height: 2;
+  padding: 10px 0px 10px 10px;
+  border: 2px solid #ddd;
+  background-color: transparent;
+  color: white;
+  border-radius: 6px;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.mensagemForm textarea:focus {
+  outline: none;
+  border: 2px solid red;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="text"] {
+  width: 100%;
+  line-height: 2;
+  padding: 10px 0px 10px 10px;
+  border: 2px solid #ddd;
+  background-color: transparent;
+  color: white;
+  border-radius: 6px;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+input[type="submit"] {
+  background-color: #fff;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  min-height: 48px;
+  width: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(211, 209, 209);
+}
+
+.politica {
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.valid {
+  color: green;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+input[type="text"].error,
+input[type="email"].error {
+  border: 2px solid red;
+}
+
+input[type="text"].valid,
+input[type="email"].valid {
+  border: 2px solid green;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  outline: none;
+  border: 2px solid red;
+}
+
+input[type="submit"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+input[type="submit"]:disabled:hover {
+  background-color: red;
+}
+
+@media screen and (max-width: 768px) {
+
+  .nameForm,
+  .emailForm {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+  }
+
+  .backgroundForm {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+.aviso {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background-color: black;
+  border: 1px red solid;
+}
